@@ -33,6 +33,17 @@
     <ConsolePause>False</ConsolePause>
     <DefineConstants>MONOTOUCH</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Qualif|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Qualif</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Qualif|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Qualif</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Xamarin.iOS" />
     <Reference Include="mscorlib" />

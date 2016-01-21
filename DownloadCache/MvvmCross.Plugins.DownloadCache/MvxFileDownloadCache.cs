@@ -277,7 +277,7 @@ namespace MvvmCross.Plugins.DownloadCache
                 if (_entriesByHttpUrl.TryGetValue(httpSource, out diskEntry))
                 {
                     var service = MvxFileStoreHelper.SafeGetFileStore();
-                    if (!service.Exists(diskEntry.DownloadedPath))
+						if(!service.Exists(diskEntry.DownloadedPath))
                     {
                         _entriesByHttpUrl.Remove(httpSource);
                     }
