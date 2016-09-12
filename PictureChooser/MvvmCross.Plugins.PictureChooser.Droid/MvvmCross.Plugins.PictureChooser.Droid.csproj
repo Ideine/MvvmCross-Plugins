@@ -11,7 +11,7 @@
     <AssemblyName>MvvmCross.Plugins.PictureChooser.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -37,26 +37,6 @@
     <Reference Include="Mono.Android" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
-    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.3\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.3\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Droid.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.3\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.4.2.3\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="MvvmCross.Platform.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.4.2.3\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,16 +53,22 @@
       <Project>{A6C9F4EF-F26E-4D54-A0D6-49A6373CB0D2}</Project>
       <Name>MvvmCross.Plugins.PictureChooser</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\MvvmCross\Core\Core\MvvmCross.Core.csproj">
+      <Project>{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
+      <Name>MvvmCross.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\MvvmCross\Platform\Platform\MvvmCross.Platform.csproj">
+      <Project>{CFF6F25A-3C3B-44EE-A54C-2ED4AAFF3ADB}</Project>
+      <Name>MvvmCross.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\MvvmCross\Droid\Droid\MvvmCross.Droid.csproj">
+      <Project>{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}</Project>
+      <Name>MvvmCross.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\MvvmCross\Platform\Droid\MvvmCross.Platform.Droid.csproj">
+      <Project>{CAF8935F-56FE-4485-9D34-4A38FE79F6C9}</Project>
+      <Name>MvvmCross.Platform.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
